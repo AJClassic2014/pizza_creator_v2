@@ -171,34 +171,33 @@ h2{
     box-sizing: border-box;
     margin: 0 auto;
 }
-#pizzar{
+/* #pizza{
     width:100%;
     height:50%;
     position:relative;
     z-index: 0;
-}
-#pizzar-board
-{
-   width: 90%;
-   height: 90%;
-   background-image: url('assets/board.svg'); 
-   background-repeat: no-repeat;
-   position: absolute;
-   left: 2em;
-   top: 2em;
-   z-index: 1;
+} */
+.pizza-board{  
+    width:90%;
+    height:40%;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-image: url('assets/board.svg'); 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
    
 }
-#pizzar-base{
-   width: 70%;
-   height: 70%;
-   background-image: url('assets/base.svg'); 
-   background-repeat: no-repeat;
-   position: absolute;
-   top: 0.5em;
-   left: 6em;
-   
-   z-index: 2;
+.pizza-base{
+    width: 70%;
+    height: 100%;
+    margin-left: 10%;
+    flex: 0 1 auto;
+    background-image: url(assets/base.svg);
+    background-repeat: no-repeat;
 }
 
 /**

@@ -4,6 +4,10 @@ import Form from './Form';
 import Summary from './Summary';
 import Button from './Button';
 
+export const ToppingsContext = React.createContext({
+  selectedToppingsList: this.state.selectedToppings
+});
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -136,6 +140,7 @@ class App extends Component {
       confirmEmail,
     } = this.state;
     return (
+      <ToppingsContext.Provider value={{selectedToppingsList: this.state.selectedToppings}}>
       <div>
         <Form 
           name={name} 
@@ -166,6 +171,7 @@ class App extends Component {
           contactNumber={contactNumber}
         />
       </div>
+      </ToppingsContext.Provider>
     )
   }
 }
