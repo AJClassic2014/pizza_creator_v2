@@ -4,10 +4,6 @@ import Form from './Form';
 import Summary from './Summary';
 import Button from './Button';
 
-export const ToppingsContext = React.createContext({
-  selectedToppingsList: this.state.selectedToppings
-});
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -67,17 +63,16 @@ class App extends Component {
         labelImage: './assets/sweetcorn.svg',
         price: 0.99,
       }],
-      selectedToppings: [],
+     // selectedToppings: [],
       basePrice: 9.99,
     };
-    this.toggleSelectedTopping = this.toggleSelectedTopping.bind(this);
     this.onNameChange = this.onNameChange.bind(this);
     this.onEmailChange = this.onEmailChange.bind(this);
     this.onAddressChange = this.onAddressChange.bind(this);
     this.onPostcodeChange = this.onPostcodeChange.bind(this);
     this.onConfirmEmailChange = this.onConfirmEmailChange.bind(this);
     this.onContactNumberChange = this.onContactNumberChange.bind(this);
-    this.toggleSelectedTopping = this.toggleSelectedTopping.bind(this);       
+  //  this.toggleSelectedTopping = this.toggleSelectedTopping.bind(this);       
   }
   onNameChange(value) {
     this.setState({
@@ -109,28 +104,11 @@ class App extends Component {
       contactNumber: value,
     });
   }
-  toggleSelectedTopping(topping) {
-    const { selectedToppings } = this.state;
-    const { name } = topping;
-    const isActive = selectedToppings.find(selectedTopping => selectedTopping.name === name);
-    if (isActive) {
-     // let result = [];
-      this.setState({
-        selectedToppings: selectedToppings.filter(selectedTopping => (selectedTopping.name !== name)),
-      });
-      return;
-    }
-    this.setState({
-      selectedToppings: [
-        ...this.state.selectedToppings,
-        topping,
-      ]
-    });
-  }
+
   render() {
     const { 
       toppings, 
-      selectedToppings, 
+      //selectedToppings, 
       basePrice, 
       name, 
       address, 
@@ -139,8 +117,13 @@ class App extends Component {
       contactNumber,
       confirmEmail,
     } = this.state;
+
+    const {
+      selectedToppings,
+      toggleSelectedTopping,
+    } = this.props;
     return (
-      <ToppingsContext.Provider value={{selectedToppingsList: this.state.selectedToppings}}>
+     
       <div>
         <Form 
           name={name} 
@@ -159,7 +142,7 @@ class App extends Component {
         <Toppings 
           toppings={toppings} 
           selectedToppings={selectedToppings} 
-          toggleSelectedTopping={this.toggleSelectedTopping} 
+          toggleSelectedTopping={toggleSelectedTopping} 
         />
         <Summary selectedToppings={selectedToppings} basePrice={basePrice} />
         <Button 
@@ -171,7 +154,7 @@ class App extends Component {
           contactNumber={contactNumber}
         />
       </div>
-      </ToppingsContext.Provider>
+    
     )
   }
 }
