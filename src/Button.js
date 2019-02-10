@@ -14,6 +14,7 @@ const Button = ({
         type="submit" 
         onClick={() => {
           if (!selectedToppings || !selectedToppings.length) {
+            alert("Please choose at lease one toppings")
             return;
           }
           let totalPrice = 9.99;

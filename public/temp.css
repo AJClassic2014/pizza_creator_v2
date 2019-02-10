@@ -1,0 +1,45 @@
+.Sweetcorn.ingredient{
+    position: absolute;
+    width: 80%;
+    height: 70%;
+}
+
+.Sweetcorn.ingredient div:nth-child(1){
+    position:absolute;
+    width:10%;
+    height:10%;
+    top:17%;
+    left:20%;
+    background-image: url(assets/sweetcorn.svg);
+    background-repeat: no-repeat;
+}
+
+.Sweetcorn.ingredient div:nth-child(2){
+    position:absolute;
+    width:10%;
+    height:10%;
+    top:15%;
+    left:17%;
+    background-image: url(assets/sweetcorn.svg);
+    background-repeat: no-repeat;
+}
+
+.Sweetcorn.ingredient div:nth-child(3){
+    position:absolute;
+    width:10%;
+    height:10%;
+    top: 45%;
+    left: 30%;
+    background-image: url(assets/sweetcorn.svg);
+    background-repeat: no-repeat;
+}
+
+.Sweetcorn.ingredient div:nth-child(4){
+    position:absolute;
+    width:10%;
+    height:10%;
+    top: 27%;
+    left: 65%;
+    background-image: url(assets/sweetcorn.svg);
+    background-repeat: no-repeat;
+}

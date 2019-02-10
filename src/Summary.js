@@ -12,7 +12,7 @@ const Summary = ({
       {selectedToppings.map(({ name, price }) => (<Item name={name} key={name} price={price} />))}
       <hr />
       <div className="total-price">
-        Total: ${selectedToppings.reduce((total, { price }) => (total + price), basePrice)}
+        Total: ${selectedToppings.reduce((total, { price }) => (total + price), basePrice).toFixed(2)}
       </div>
     </div>
   );

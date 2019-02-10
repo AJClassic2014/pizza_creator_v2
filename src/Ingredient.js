@@ -13,6 +13,7 @@ const Ingredient = ({
         <div></div>
         <div></div>
         <div></div>
+        {(name==="Onion"||"Pepper"||"Olive"||"Chili"||"Mushroom")&&<div></div>}
       </div>
   );
 
