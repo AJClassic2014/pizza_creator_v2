@@ -63,7 +63,6 @@ class App extends Component {
         labelImage: './assets/sweetcorn.svg',
         price: 0.99,
       }],
-     // selectedToppings: [],
       basePrice: 9.99,
     };
     this.onNameChange = this.onNameChange.bind(this);
@@ -71,8 +70,7 @@ class App extends Component {
     this.onAddressChange = this.onAddressChange.bind(this);
     this.onPostcodeChange = this.onPostcodeChange.bind(this);
     this.onConfirmEmailChange = this.onConfirmEmailChange.bind(this);
-    this.onContactNumberChange = this.onContactNumberChange.bind(this);
-  //  this.toggleSelectedTopping = this.toggleSelectedTopping.bind(this);       
+    this.onContactNumberChange = this.onContactNumberChange.bind(this);   
   }
   onNameChange(value) {
     this.setState({
@@ -108,7 +106,6 @@ class App extends Component {
   render() {
     const { 
       toppings, 
-      //selectedToppings, 
       basePrice, 
       name, 
       address, 
@@ -153,8 +150,7 @@ class App extends Component {
           postcode={postcode}
           contactNumber={contactNumber}
         />
-      </div>
-    
+      </div>   
     )
   }
 }

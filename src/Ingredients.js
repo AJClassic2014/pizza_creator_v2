@@ -1,7 +1,6 @@
 import React from 'react';
 import Ingredient from './Ingredient';
 
-
 class Ingredients extends React.Component {
   
   render() {

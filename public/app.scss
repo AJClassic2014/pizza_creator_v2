@@ -137,31 +137,503 @@ h2 {
 /* .toppings span{
     line-height: 3em;//should be improved
 } */
-#pizzar {
-    width: 100%;
-    height: 50%;
-    position: relative;
-    z-index: 0;
-}
-#pizzar-board {
+.pizza-board {
     width: 90%;
-    height: 90%;
+    height: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
     background-image: url('assets/board.svg');
     background-repeat: no-repeat;
-    position: absolute;
-    left: 2em;
-    top: 2em;
-    z-index: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
-#pizzar-base {
+.pizza-base {
     width: 70%;
-    height: 70%;
-    background-image: url('assets/base.svg');
+    height: 100%;
+    margin-left: 10%;
+    flex: 0 1 auto;
+    background-image: url(assets/base.svg);
     background-repeat: no-repeat;
-    position: absolute;
-    top: 0.5em;
-    left: 6em;
-    z-index: 2;
+    position: relative;
+}
+.Anchovy {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 20%;
+                left: 40%;
+                background-image: url(assets/anchovy.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 30%;
+                left: 40%;
+                background-image: url(assets/anchovy.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 10%;
+                left: 60%;
+                background-image: url(assets/anchovy.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Bacon {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 33%;
+                left: 44%;
+                background-image: url(assets/bacon.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 35%;
+                left: 66%;
+                background-image: url(assets/bacon.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 33%;
+                left: 35%;
+                background-image: url(assets/bacon.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Basil {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 35%;
+                left: 39%;
+                background-image: url(assets/basil.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 37%;
+                left: 78%;
+                background-image: url(assets/basil.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 33%;
+                left: 89%;
+                background-image: url(assets/basil.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Chili {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 45%;
+                left: 67%;
+                background-image: url(assets/chili.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 49%;
+                left: 65%;
+                background-image: url(assets/chili.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 47%;
+                left: 33%;
+                background-image: url(assets/chili.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(4) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 45%;
+                left: 56%;
+                background-image: url(assets/chili.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Mozzarella {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 44%;
+                left: 67%;
+                background-image: url(assets/mozzarella.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 46%;
+                left: 65%;
+                background-image: url(assets/mozzarella.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 45%;
+                left: 23%;
+                background-image: url(assets/mozzarella.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Mushroom {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 34%;
+                left: 43%;
+                background-image: url(assets/mushroom.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 27%;
+                left: 60%;
+                background-image: url(assets/mushroom.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 35%;
+                left: 32%;
+                background-image: url(assets/mushroom.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(4) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 30%;
+                left: 56%;
+                background-image: url(assets/mushroom.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Olive {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 43%;
+                left: 34%;
+                background-image: url(assets/olive.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 40%;
+                left: 60%;
+                background-image: url(assets/olive.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 25%;
+                left: 40%;
+                background-image: url(assets/olive.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(4) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 37%;
+                left: 56%;
+                background-image: url(assets/olive.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Onion {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 40%;
+                left: 34%;
+                background-image: url(assets/onion.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 30%;
+                left: 36%;
+                background-image: url(assets/onion.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 53%;
+                left: 34%;
+                background-image: url(assets/onion.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(4) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 32%;
+                left: 65%;
+                background-image: url(assets/onion.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Pepper {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 45%;
+                left: 30%;
+                background-image: url(assets/pepper.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 47%;
+                left: 30%;
+                background-image: url(assets/pepper.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 30%;
+                left: 40%;
+                background-image: url(assets/pepper.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(4) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 37%;
+                left: 65%;
+                background-image: url(assets/pepper.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Pepperoni {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 27%;
+                left: 30%;
+                background-image: url(assets/pepperoni.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 35%;
+                left: 37%;
+                background-image: url(assets/pepperoni.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 25%;
+                left: 30%;
+                background-image: url(assets/pepperoni.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Peppers {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 17%;
+                left: 20%;
+                background-image: url(assets/peppers.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 15%;
+                left: 17%;
+                background-image: url(assets/peppers.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 45%;
+                left: 30%;
+                background-image: url(assets/peppers.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.Sweetcorn {
+    &.ingredient {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        div {
+            &:nth-child(1) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 27%;
+                left: 20%;
+                background-image: url(assets/sweetcorn.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 25%;
+                left: 17%;
+                background-image: url(assets/sweetcorn.svg);
+                background-repeat: no-repeat;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                width: 10%;
+                height: 10%;
+                top: 45%;
+                left: 30%;
+                background-image: url(assets/sweetcorn.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
 }
 /**
 .summary {
