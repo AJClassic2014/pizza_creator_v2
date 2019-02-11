@@ -7,7 +7,7 @@ const Summary = ({
     basePrice = 0,
   }) => (
     <div>
-      <SectionTitle><h2>Summary</h2></SectionTitle>
+      <SectionTitle><h2>Ingredients Summary</h2></SectionTitle>
       <Item name="Pizza" price={basePrice} />
       {selectedToppings.map(({ name, price }) => (<Item name={name} key={name} price={price} />))}
       <hr />
